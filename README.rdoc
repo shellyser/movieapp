@@ -1,0 +1,14 @@
+== README
+
+In order to run this on a Mac both Rails (I personally used Homebrew for this) and Bundler should be installed on your computer.
+A couple of websites in case these are not installed:
+
+* http://www.rackspace.com/blog/installing-rails-on-a-mac/
+* http://bundler.io/
+
+Once these are installed:
+
+1. 'bundle install'
+2. 'rails serve'
+
+And you should be good to go! The app should run on http://localhost:3000/.

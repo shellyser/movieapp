@@ -1,0 +1,21 @@
+<h1>NYTimes Top Trending Movies</h1>
+<div class="row">
+<div class="offset-by-four eight columns">
+  <ul>  
+    <div class= "gallery clearfix">
+      <% @parsedmovies.each do |movie|%>
+        <% if movie["multimedia"] == nil %>
+          <li><img src="http://placehold.it/75x75" title="<%= movie["display_title"] %>"></li>
+        <% else %>
+          <li><img src="<%= movie["multimedia"]["resource"]["src"] %>" title="<%= movie["display_title"] %>"></li>
+        <% end %>
+    <%end%>
+    </div>
+  </ul>
+  <div class="prev_next">
+    <%= link_to "<button>Previous</button>".html_safe,  :controller => :movies, :action => :update_previous %>
+    <%= link_to "<button>Next</button>".html_safe, :controller => :movies, :action => :update_next %>
+  </div>
+  </div>
+</div>
+
