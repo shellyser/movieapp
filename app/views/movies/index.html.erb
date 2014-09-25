@@ -13,8 +13,8 @@
     </div>
   </ul>
   <div class="prev_next">
-    <%= link_to "<button>Previous</button>".html_safe,  :controller => :movies, :action => :update_previous %>
-    <%= link_to "<button>Next</button>".html_safe, :controller => :movies, :action => :update_next %>
+    <%= button_to "Previous",  {:controller => :movies, :action => :update_previous}, :method => :get %>
+    <%= button_to "Next", {:controller => :movies, :action => :update_next}, :method => :get %>
   </div>
   </div>
 </div>
